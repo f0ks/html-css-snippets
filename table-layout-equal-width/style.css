@@ -5,6 +5,7 @@
 
 .wrapper {
   display: table;
+  /*table-layout: fixed;*/
   /*width: 800px;*/
   width: 100%;
 }
