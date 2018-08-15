@@ -1,0 +1,17 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper {
+  display: table;
+  /*width: 800px;*/
+  width: 100%;
+}
+
+.item {
+  background: #cef;
+  display: table-cell;
+  text-align: center;
+  border: 1px solid black;
+}
