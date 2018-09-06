@@ -10,6 +10,7 @@ html {
 
 p, body {
     padding: 10px;
+    font-family: Calibri, Arial, Helvetica;
 }
 
 .sidebar {
@@ -60,4 +61,18 @@ p, body {
 .fluid-fixed .content {
     float: left;
     margin-right: 200px;
+}
+
+/* fixed-fluid-fixed */
+
+.fixed-fluid-fixed .sidebar {
+    width: 200px;
+}
+
+.fixed-fluid-fixed .sidebar.left {
+    float: left;
+}
+
+.fixed-fluid-fixed .content {
+    margin: 0 200px;
 }
