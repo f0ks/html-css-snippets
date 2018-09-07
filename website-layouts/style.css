@@ -65,12 +65,23 @@ p, body {
 
 /* fixed-fluid-fixed */
 
+.fixed-fluid-fixed .wrapper {
+    position: relative;
+}
+
+
 .fixed-fluid-fixed .sidebar {
     width: 200px;
 }
 
 .fixed-fluid-fixed .sidebar.left {
-    float: left;
+    position: absolute;
+}
+
+.fixed-fluid-fixed .sidebar.right {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .fixed-fluid-fixed .content {
