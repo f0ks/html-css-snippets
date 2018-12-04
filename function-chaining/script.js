@@ -1,42 +1,45 @@
 (function () {
     'use strict';
 
-    /*
+    class Kitten {
+        constructor() {
 
-    ///////////////////
-    // WITHOUT CHAINING
+        }
 
-    var bob = new Kitten();
+        setName(name) {
+            this.name = name;
+            return this;
+        }
 
-    bob.setName('Bob');
-    bob.setColor('black');
-    bob.setGender('male');
+        setColor(color) {
+            this.color = color;
+            return this;
+        }
 
-    bob.save();
+        setGender(gender) {
 
-    // OUTPUT:
-    // > saving Bob, the black male kitten...
+            this.gender = gender;
+            return this;
+        }
 
+        save() {
+            console.log(`saving ${this.name}, the ${this.color} ${this.gender} kitten`);
+        }
+    }
 
-    ///////////////////
-    // WITH CHAINING
+    const thomas = new Kitten();
+
+    thomas.setName('Thomas');
+    thomas.setColor('red');
+    thomas.setGender('male');
+
+    thomas.save();
 
     new Kitten()
-      .setName('Bob')
-      .setColor('black')
-      .setGender('male')
-      .save();
-
-    // OUTPUT:
-    // > saving Bob, the black male kitten...
-
-
-    */
-
-
-    console.log();
-
+        .setName('Bob')
+        .setColor('black')
+        .setGender('male')
+        .save();
 
 })();
 
-console.log('--------------------------------------------------------------');
