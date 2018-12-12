@@ -13,6 +13,10 @@ p, body {
     font-family: Calibri, Arial, Helvetica;
 }
 
+section {
+    overflow: hidden;
+}
+
 .sidebar {
     background: #ddb6a5;
 }
