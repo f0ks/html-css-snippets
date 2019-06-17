@@ -1,13 +1,18 @@
 const Module = (function () {
   'use strict';
 
+  console.log('init module');
+
+  // some module init code
+  let privateCounter = 0;
+
   const privateMethod = function () {
     return this;
     // private
   };
 
   const someMethod = function () {
-    return this;
+    return privateCounter++;
 
     // public
   };
@@ -26,3 +31,5 @@ const Module = (function () {
 })();
 
 console.log(Module.someMethod());
+console.log(Module.someMethod());
+console.log(Module.anotherMethod());
