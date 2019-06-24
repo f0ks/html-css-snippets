@@ -24,8 +24,7 @@ const Module = (function () {
   };
 
   return {
-    someMethod: someMethod,
-    anotherMethod: anotherMethod
+    someMethod, anotherMethod
   };
 
 })();
