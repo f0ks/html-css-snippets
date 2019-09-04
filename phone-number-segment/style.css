@@ -1,0 +1,27 @@
+.phone {
+    margin: 1rem;
+}
+
+.phone__segment {
+
+}
+
+.phone__segment._lenght1 {
+    width: 11px;
+}
+
+.phone__segment._lenght2 {
+    width: 22px;
+}
+
+.phone__segment._lenght3 {
+    width: 33px;
+}
+
+.phone__segment._lenght4 {
+    width: 44px;
+}
+
+.phone__segment._lenght5 {
+    width: 55px;
+}
