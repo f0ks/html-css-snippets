@@ -1,0 +1,21 @@
+.box {
+    width:20px;
+    height: 20px;
+    background: red;
+    opacity: 0;
+}
+.elementToFadeInAndOut {
+
+    -webkit-animation: fadeinout 1s linear forwards;
+    animation: fadeinout 1s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
