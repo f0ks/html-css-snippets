@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+  	padding: 0;
+	margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.one, .two, .three {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.one {
+    /* line-height */
+    background: #faf;
+    line-height: 100px;
+}
+
+.two {
+    /* flexbox */
+    background: #9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three {
+    /* table */
+    display: table;
+    background: #ffb;
+}
+.three span {
+    display: table-cell;
+    vertical-align: middle;
+}
