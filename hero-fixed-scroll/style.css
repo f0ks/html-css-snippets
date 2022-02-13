@@ -1,0 +1,23 @@
+.hero {
+    padding: 2rem;
+    background: linear-gradient(coral, #ab5500);
+    color: white;
+
+
+    height: 500px;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+}
+
+.content {
+    padding: 3rem;
+    font-size: 2rem;
+}
+
+.adjacent {
+    position: relative;
+    z-index: 1;
+    background: white;
+
+}
