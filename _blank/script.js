@@ -5,6 +5,7 @@
   let isSticky = false;
   let oldScroll = window.scrollY;
   let isScrollingUp = null;
+  const NEGATIVE_HEIGHT = -100;
 
   function elementsOverlap(el1, el2) {
     const domRect1 = el1.getBoundingClientRect();
@@ -20,16 +21,18 @@
 
   function getShift(el1, el2) {
     const sh = Math.ceil(el1.getBoundingClientRect().top - el2.getBoundingClientRect().height);
-    return sh <= -100 ? -100 : sh;
+    return sh <= NEGATIVE_HEIGHT ? NEGATIVE_HEIGHT : sh;
     //return sh;
   }
 
   const menu = document.querySelector('.menu');
+  const crown = document.querySelector('.crown');
   const after = document.querySelector('.after');
 
 
   if (elementsOverlap(menu, after)) {
     menu.style.marginTop = `${getShift(after, menu)}px`;
+    crown.style.marginTop = `${getShift(after, menu)}px`;
   }
 
 
@@ -75,7 +78,8 @@
         return;
       }
 
-      menu.style.marginTop = `${shift}px`;
+      menu.style.marginTop = shift < 0 ? `${shift}px` : '0px';
+      crown.style.marginTop = shift < 0 ? `${shift}px` : '0px';
 
 
       /*      menu.classList.remove('reveal');
@@ -89,7 +93,8 @@
     if (isInTransition && !isSticky) {
       console.log('isInTransition');
       menu.style.marginTop = shift < 0 ? `${shift}px` : '0px';
-      if (shift === -100) {
+      crown.style.marginTop = shift < 0 ? `${shift}px` : '0px';
+      if (shift === NEGATIVE_HEIGHT) {
         isSticky = true;
         menu.classList.add('sticky');
 

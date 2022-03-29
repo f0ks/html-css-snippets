@@ -4,17 +4,25 @@
     margin: 0;
 }
 
+.crown {
+    background: #747;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+}
+
 .menu {
     background: #ff5;
     height: 100px;
     position: fixed;
     width: 100%;
-
-    transition: top .3s linear;
+    top: 30px;
+    transition: top, height .3s linear;
 
 }
 
 .menu.sticky {
+    height: 50px;
     top: -100px;
     position: sticky;
 }
