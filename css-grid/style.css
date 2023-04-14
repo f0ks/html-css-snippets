@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent {
+    display: grid;
+    /*grid-template-columns: 1fr 3fr 1fr; !* Three columns, one three times as wide as the others *!*/
+    /*grid-template-rows: 200px auto 100px; !* Three rows, two with explicit widths *!*/
+    grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+}
+
+/*
+  Now, we can explicitly place items in the defined rows and columns.
+*/
+.child-1 {
+    background: #fec;
+    grid-area: header;
+}
+
+.child-2 {
+    background: #cef;
+    grid-area: main;
+}
+
+.child-3 {
+    background: #aea;
+    grid-area: sidebar;
+}
+
+.child-4 {
+    background: #ff99ee;
+
+    grid-area: footer;
+}
+
