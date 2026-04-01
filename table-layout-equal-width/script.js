@@ -1,5 +1,1 @@
-(function () {
-
-    'use strict';
-
-})();
+// Table Layout Equal Width — no JS needed

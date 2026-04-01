@@ -1,25 +1,6 @@
-(function () {
-  'use strict';
+const text = document.querySelector('.ellipsis');
+const showMore = document.querySelector('.show-more');
 
-  /*
-
-
-  */
-
-
-  console.log();
-
-  window.addEventListener('load', function () {
-    const text = document.querySelector('.ellipsis');
-    const showMore = document.querySelector('.show-more');
-    showMore.onclick = function () {
-      text.classList.remove("ellipsis");
-
-    };
-
-  })
-
-
-})();
-
-console.log('--------------------------------------------------------------');
+showMore.addEventListener('click', () => {
+  text.classList.remove('ellipsis');
+});

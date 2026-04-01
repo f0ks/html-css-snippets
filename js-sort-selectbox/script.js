@@ -1,35 +1,16 @@
-(function () {
+const selectBox = document.getElementById('selectbox');
+const sortButton = document.getElementById('sort');
+const selectedValue = document.getElementById('value');
 
-    window.addEventListener('load', onLoad);
+sortButton.addEventListener('click', () => {
+  const options = [...selectBox.querySelectorAll('option')];
+  const sorted = options.map((opt) => opt.innerHTML).sort();
 
-    function onLoad() {
-        var selectBox = document.getElementById('selectbox');
-        var sortButton = document.getElementById('sort');
-        var selectedValue = document.getElementById('value');
+  options.forEach((opt, i) => {
+    opt.innerHTML = sorted[i];
+  });
+});
 
-
-        sortButton.addEventListener('click', function () {
-            var selectItems = selectBox.querySelectorAll('option');
-            var selectValues = [];
-
-            selectItems.forEach(function (item) {
-                selectValues.push(item.innerHTML);
-            });
-
-            selectValues.sort();
-
-
-            for (var i = 0; i < selectItems.length; i++) {
-                selectItems[i].innerHTML = selectValues[i];
-            }
-
-        });
-
-        selectBox.addEventListener('change', function (ev) {
-            selectedValue.innerHTML = ev.target.value;
-        });
-
-
-    }
-
-})();
+selectBox.addEventListener('change', (ev) => {
+  selectedValue.innerHTML = ev.target.value;
+});

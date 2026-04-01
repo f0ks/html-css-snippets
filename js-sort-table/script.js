@@ -1,21 +1,12 @@
-(function () {
+const sortableTable = (id) => {
+  const headers = document.querySelectorAll(`#${id} th`);
 
-    'use strict';
-
-    function sortableTable(id) {
-        let srtLabels = document.querySelectorAll('#' + id + ' th');
-
-        srtLabels.forEach(function (el) {
-            el.addEventListener('click', function (e) {
-                console.log(e.target);
-            });
-            el.style.cursor = 'pointer';
-        });
-
-    }
-
-    window.addEventListener('load', function () {
-        sortableTable('my-table');
+  headers.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      console.log(e.target);
     });
+    el.style.cursor = 'pointer';
+  });
+};
 
-})();
+sortableTable('my-table');

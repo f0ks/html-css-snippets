@@ -1,45 +1,32 @@
-(function () {
-    'use strict';
+class Kitten {
+  setName(name) {
+    this.name = name;
+    return this;
+  }
 
-    class Kitten {
-        constructor() {
+  setColor(color) {
+    this.color = color;
+    return this;
+  }
 
-        }
+  setGender(gender) {
+    this.gender = gender;
+    return this;
+  }
 
-        setName(name) {
-            this.name = name;
-            return this;
-        }
+  save() {
+    console.log(`saving ${this.name}, the ${this.color} ${this.gender} kitten`);
+  }
+}
 
-        setColor(color) {
-            this.color = color;
-            return this;
-        }
+const thomas = new Kitten();
+thomas.setName('Thomas');
+thomas.setColor('red');
+thomas.setGender('male');
+thomas.save();
 
-        setGender(gender) {
-
-            this.gender = gender;
-            return this;
-        }
-
-        save() {
-            console.log(`saving ${this.name}, the ${this.color} ${this.gender} kitten`);
-        }
-    }
-
-    const thomas = new Kitten();
-
-    thomas.setName('Thomas');
-    thomas.setColor('red');
-    thomas.setGender('male');
-
-    thomas.save();
-
-    new Kitten()
-        .setName('Bob')
-        .setColor('black')
-        .setGender('male')
-        .save();
-
-})();
-
+new Kitten()
+  .setName('Bob')
+  .setColor('black')
+  .setGender('male')
+  .save();

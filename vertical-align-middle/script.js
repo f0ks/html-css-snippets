@@ -1,15 +1,1 @@
-(function () {
-    'use strict';
-
-    /*
-
-
-    */
-
-
-    console.log();
-
-
-})();
-
-console.log('--------------------------------------------------------------');
+// Vertical Align Middle — no JS needed

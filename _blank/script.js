@@ -1,6 +1,1 @@
-(function () {
-  'use strict';
-
-
-})();
-
+// Blank template

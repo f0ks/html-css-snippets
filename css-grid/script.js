@@ -1,5 +1,1 @@
-(function () {
-  'use strict';
-
-})();
-
+// CSS Grid — no JS needed

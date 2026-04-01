@@ -1,39 +1,19 @@
-(function () {
-    'use strict';
+const body = document.body;
+let curBodyWidth = 100;
 
-    let body,
-        curBodyWidth = null;
+window.addEventListener('wheel', (event) => {
+  if (!event.shiftKey) return;
 
-    window.addEventListener('load', () => {
-        body = document.querySelector('body');
-    });
+  const delta = Math.sign(event.wheelDelta);
+  body.style.margin = '0 auto';
 
-    window.addEventListener('wheel', event => {
-        if (!event.shiftKey) return;
+  if (delta === 1 && curBodyWidth < 100) {
+    curBodyWidth += 5;
+  }
 
-        const delta = Math.sign(event.wheelDelta);
-        body.style.margin = '0 auto';
+  if (delta === -1 && curBodyWidth > 0) {
+    curBodyWidth -= 5;
+  }
 
-        if (curBodyWidth === null) {
-            curBodyWidth = 100;
-        }
-
-        if (delta === 1) {
-            if (curBodyWidth < 100) {
-                curBodyWidth += 5;
-            }
-            body.style.width = curBodyWidth + '%';
-        }
-
-        if (delta === -1) {
-            if (curBodyWidth > 0) {
-                curBodyWidth -= 5;
-            }
-            body.style.width = curBodyWidth + '%';
-        }
-
-    });
-
-
-})();
-
+  body.style.width = `${curBodyWidth}%`;
+});

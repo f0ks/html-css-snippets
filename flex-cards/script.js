@@ -1,15 +1,1 @@
-(function () {
-    'use strict';
-
-    /*
-
-
-    */
-
-
-    console.log();
-
-
-})();
-
-console.log('--------------------------------------------------------------');
+// Flex Cards — no JS needed

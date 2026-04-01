@@ -1,15 +1,1 @@
-(function () {
-    'use strict';
-
-    /*
-
-
-    */
-
-
-    console.log();
-
-
-})();
-
-console.log('--------------------------------------------------------------');
+// Flexbox Examples — no JS needed

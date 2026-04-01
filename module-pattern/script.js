@@ -1,34 +1,13 @@
-const Module = (function () {
-  'use strict';
+console.log('init module');
 
-  console.log('init module');
+let privateCounter = 0;
 
-  // some module init code
-  let privateCounter = 0;
+const privateMethod = () => privateCounter;
 
-  const privateMethod = function () {
-    return this;
-    // private
-  };
+export const someMethod = () => privateCounter++;
 
-  const someMethod = function () {
-    return privateCounter++;
+export const anotherMethod = () => privateMethod();
 
-    // public
-  };
-
-  const anotherMethod = function () {
-    return this;
-
-    // public
-  };
-
-  return {
-    someMethod, anotherMethod
-  };
-
-})();
-
-console.log(Module.someMethod());
-console.log(Module.someMethod());
-console.log(Module.anotherMethod());
+console.log(someMethod());
+console.log(someMethod());
+console.log(anotherMethod());
